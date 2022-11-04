@@ -1,24 +1,38 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+package com.mycompany.mavenproject2;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
 
 /**
  *
- * @author alexsandro.lsipelli
+ * @author edney.psilva
  */
-import java.util.ArrayList;
-import javax.swing.JOptionPane;
-import java.util.Scanner;
-
-import java.util.Collections;
-import java.util.List;
-
-class Jogo {
- 
-  public static void main(String[] args) {
-    double escolhadeinicio ;
+public class menu {
+    public static void menu(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Menu");
+        System.out.println("\n1 - Jogar\n2 - Créditos\n3 - Instruções\n4 - Sair");
+        int entrada = scanner.nextInt();
+        switch (entrada){
+            case 1:
+                jogar();
+                break;
+            case 2:
+                créditos();
+                break;
+            case 3:
+                intruções();
+                break;
+        }
+    }
+    public static void jogar(){
+         double escolhadeinicio ;
       String nome; 
       int tecla;
      Scanner ler = new Scanner(System.in);
@@ -508,33 +522,24 @@ nome +
          break;
          default:
          System.out.println("Escolha inválida!");}
-          cantil++;
+          cantil2++;
      } while (!acertou3 && cantil2<2);
           if (cantil==1){System.out.println(" infelismente nao vou poder falar,siga sua rota sem eu \n mas sem ele " +nome+ " nao conseguirar seguir, volte ao inicio");}
           else{System.out.println("Está correto, promessa é promessa. Estou tão afobado assim porque eu amo aguardente, acho que de um ano para cá acabei ficando dependente ou apenas sendo um degustador, por isso a vontade de tomar ou ir na taverna. ");}
           
 
    }
- 
+  
+    
+    public static void intruções(){
+        System.out.println("instruções");
+    }
+    
+    public static void créditos(){
+        System.out.println("===== DESENVOLVEDORES =====\nAlexsandro Lopes Sipelli\nDanilo Ribeiro Cueto\nEdney Pereira Silva\nHiago Ferreira\nMatheus Medeiros Escudeiro");
+    }
+    
+    public static void main(String[] args) {
+        menu();
+    }
 }
- 
-
-
-
-
-    
-
-     
-     
-  
-     
-             
-    
-    
-    
-    
-     
-    
-    
-  
-
