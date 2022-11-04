@@ -28,7 +28,7 @@ class Jogo {
  
     do
    {
-     System.out.println("Olá, bem vindo ao Mineirinho simulaitor versao 12 \n");
+     System.out.println("Olá, bem vindo ao Mineirinho simulaitor versao 13 \n");
    
     
      System.out.println("Vocês estão em uma taverna, quando uma briga generalizada começa. Os guardas chegam e levam todos presos. Agora vocês precisam provar que são inocentes, ou passarão meses na cadeia " + "\n" );
