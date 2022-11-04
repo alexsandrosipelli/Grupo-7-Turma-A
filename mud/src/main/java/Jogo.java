@@ -28,7 +28,7 @@ class Jogo {
  
     do
    {
-     System.out.println("Olá, bem vindo ao Mochileiro \n");
+     System.out.println("Olá, bem vindo ao Mineirinho simulaitor \n");
    
     
      System.out.println("Vocês estão em uma taverna, quando uma briga generalizada começa. Os guardas chegam e levam todos presos. Agora vocês precisam provar que são inocentes, ou passarão meses na cadeia " + "\n" );
