@@ -8,17 +8,20 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
-
 /**
  *
  * @author edney.psilva
  */
+//CORRIGINDO ALGUNS ERROS DE LOGICA, TEXTO E CONDIÇÕES...
+
 public class menu {
     public static void menu(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Menu");
         System.out.println("\n1 - Jogar\n2 - Créditos\n3 - Instruções\n4 - Sair");
         int entrada = scanner.nextInt();
+        
+       
         switch (entrada){
             case 1:
                 jogar();
@@ -29,15 +32,20 @@ public class menu {
             case 3:
                 intruções();
                 break;
+            case 4: 
+                System.exit(0);
+                
+            default: System.out.println(" Opção invalida escolha entre 1 e 4!!! ");
+                    
         }
     }
     public static void jogar(){
          double escolhadeinicio ;
       String nome; 
       int tecla;
-     Scanner ler = new Scanner(System.in);
-     String menu = "\n vc perdeu ";
-     menu += " tente de novo ";
+     Scanner scanner = new Scanner(System.in);
+     String perdeu = "\n VOCÊ PERDEU ";
+     perdeu += " TENTE DE NOVO!!! ";
 
  
     do
@@ -50,15 +58,15 @@ public class menu {
      System.out.println(" Você deseja iniciar ? " + "\n");
      System.out.println("1- sim ");
      System.out.println("2- nao ");
-     escolhadeinicio= ler.nextDouble();
+     escolhadeinicio= scanner.nextDouble();
      if (escolhadeinicio ==1 ){ System.out.println(" Iniciando sua jornanda da sabedoria " + "\n " );}
        
-     else { System.out.println(" estamos aguardando sua sede por sabedoria " + "\n" ) 
+     else { System.out.println(" Que pena estamos aguardando sua sede por sabedoria " + "\n" ) 
        ;}
     }while (escolhadeinicio !=1 );
       
     System.out.println(" Como é o seu nome ? " + "\n");
-    nome= ler.next();
+    nome= scanner.next();
     System.out.println(" muito bem Grande Mochileiro " + nome );
     
      int escolha;
@@ -67,7 +75,7 @@ public class menu {
     {
          
      System.out.println("escolha sua classe \n 1-Guerreiro \n 2-Mago \n 3-Bruxa \n 4-Fada ");
-      escolha = ler.nextInt();
+      escolha = scanner.nextInt();
       
       switch (escolha){
           case 1 :
@@ -114,31 +122,35 @@ public class menu {
                 System.out.println("C) Moleza a respota correta é 10 ");
                 System.out.println("D) Nao preciso da mochila mesmo não a resposta correta é 84 ");
                 System.out.println("E)  Essa jornada será facil a respota correta é 20");
-                 System.out.println("Informe sua resposta: ");
+                System.out.println("Informe sua resposta: ");
                  
-                operacaoStr = ler.next();
+                operacaoStr = scanner.next();
                 operacao = operacaoStr .charAt(0);
                 switch(operacao) {
                 case 'a': case 'A':
-                    System.out.println("Resposta incorreta e sua jornada acaba aqui  ");
+                    System.out.println("Resposta incorreta e sua jornada acaba aqui  "+perdeu);System.exit(0);    
                     break;
                 case 'b':case 'B':
-                    System.out.println("... 12, você é bem esperto e por isso lhe darei um cantil com um pouco da água mágica que tenho em meu lar. Ela lhe ajudará a passar por calores extremos e até venenos.\n Boa sorte em sua jornada, você irá precisar.\n" +
-"\n" +
-"\n" +
-"Avançando na sua jornada, nosso mochileiro conseguiu um item mágico que poderá ajudá-lo mais pra frente nesta história. ");
+                    System.out.println("... 12, você é bem esperto e por isso lhe darei um cantil com um pouco da água mágica que tenho em meu lar. Ela lhe ajudará a passar por calores extremos e até venenos.\n Boa sorte em sua jornada, você irá precisar.\n");
                     break;
                 case 'c':case 'C':
-                    System.out.println("Resposta incorreta e sua jornada acaba aqui  ");
+                    System.out.println("Resposta incorreta e sua jornada acaba aqui "+perdeu);System.exit(0);                    
                     break;
                 case 'd':case 'D':
-                    System.out.println("Resposta incorreta e sua jornada acaba aqui  ");
+                    System.out.println("Resposta incorreta e sua jornada acaba aqui  "+perdeu);System.exit(0);    
                     break;
                 case 'e':case 'E':
-                    System.out.println("Resposta incorreta e sua jornada acaba aqui  ");
+                    System.out.println("Resposta incorreta e sua jornada acaba aqui  "+perdeu);System.exit(0);    
                     break;
+                    default : System.out.println("Opçao invalida escolha entre as alternativas A,B,C,D ou E "+perdeu);System.exit(0);
                 }
             }while(tacerto);
+            
+             if (tacerto)
+          {
+              System.out.println("Avançando na sua jornada, nosso mochileiro conseguiu um item mágico que poderá ajudá-lo mais pra frente nesta história. ");
+          }
+            
               
               
       break;
@@ -188,29 +200,31 @@ nome +
                 System.out.println("E)  Essa jornada será facil a respota correta é 20");
                  System.out.println("Informe sua resposta: ");
                  
-                operacaoStr = ler.next();
+                operacaoStr =scanner.next();
                 operacao = operacaoStr .charAt(0);
                 switch(operacao) {
                 case 'a': case 'A':
-                    System.out.println("Resposta incorreta e sua jornada acaba aqui  ");
+                    System.out.println("Resposta incorreta e sua jornada acaba aqui  "+perdeu);System.exit(0);    
                     break;
                 case 'b':case 'B':
-                    System.out.println("... 12, você é bem esperto e por isso lhe darei um cantil com um pouco da água mágica que tenho em meu lar. Ela lhe ajudará a passar por calores extremos e até venenos.\n Boa sorte em sua jornada, você irá precisar.\n" +
-"\n" +
-"\n" +
-"Avançando na sua jornada, nosso mochileiro conseguiu um item mágico que poderá ajudá-lo mais pra frente nesta história. ");
+                    System.out.println("... 12, você é bem esperto e por isso lhe darei um cantil com um pouco da água mágica que tenho em meu lar. Ela lhe ajudará a passar por calores extremos e até venenos.\n Boa sorte em sua jornada, você irá precisar.\n" );
                     break;
                 case 'c':case 'C':
-                    System.out.println("Resposta incorreta e sua jornada acaba aqui  ");
+                    System.out.println("Resposta incorreta e sua jornada acaba aqui  "+perdeu);System.exit(0);    
                     break;
                 case 'd':case 'D':
-                    System.out.println("Resposta incorreta e sua jornada acaba aqui  ");
+                    System.out.println("Resposta incorreta e sua jornada acaba aqui  "+perdeu);System.exit(0);    
                     break;
                 case 'e':case 'E':
-                    System.out.println("Resposta incorreta e sua jornada acaba aqui  ");
+                    System.out.println("Resposta incorreta e sua jornada acaba aqui  "+perdeu);System.exit(0);    
                     break;
+                    default : System.out.println("Opçao invalida escolha entre as alternativas A,B,C,D ou E "+perdeu);System.exit(0);
                 }
             }while(tacerto2);
+           if (tacerto2)
+          {
+              System.out.println("Avançando na sua jornada, nosso mochileiro conseguiu um item mágico que poderá ajudá-lo mais pra frente nesta história. ");
+          }
       break;    
       case 3:
       System.out.println (" A aventura dos numeros nos espera, mochileiro(a) bruxa " + nome + "\n\n");
@@ -258,29 +272,32 @@ nome +
                 System.out.println("E)  Essa jornada será facil a respota correta é 20");
                  System.out.println("Informe sua resposta: ");
                  
-                operacaoStr = ler.next();
+                operacaoStr = scanner.next();
                 operacao = operacaoStr .charAt(0);
                 switch(operacao) {
                 case 'a': case 'A':
-                    System.out.println("Resposta incorreta e sua jornada acaba aqui  ");
+                    System.out.println("Resposta incorreta e sua jornada acaba aqui  "+perdeu);System.exit(0);    
                     break;
                 case 'b':case 'B':
-                    System.out.println("... 12, você é bem esperto e por isso lhe darei um cantil com um pouco da água mágica que tenho em meu lar. Ela lhe ajudará a passar por calores extremos e até venenos.\n Boa sorte em sua jornada, você irá precisar.\n" +
-"\n" +
-                "\n" +
-                "Avançando na sua jornada, nosso mochileiro conseguiu um item mágico que poderá ajudá-lo mais pra frente nesta história. ");
+                    System.out.println("... 12, você é bem esperto e por isso lhe darei um cantil com um pouco da água mágica que tenho em meu lar. Ela lhe ajudará a passar por calores extremos e até venenos.\n Boa sorte em sua jornada, você irá precisar.\n");
                     break;
                 case 'c':case 'C':
-                    System.out.println("Resposta incorreta e sua jornada acaba aqui  \" ");
+                    System.out.println("Resposta incorreta e sua jornada acaba aqui  "+perdeu);System.exit(0);    
                     break;
                 case 'd':case 'D':
-                    System.out.println("Resposta incorreta e sua jornada acaba aqui  ");
+                    System.out.println("Resposta incorreta e sua jornada acaba aqui  "+perdeu);System.exit(0);    
                     break;
                 case 'e':case 'E':
-                    System.out.println("Resposta incorreta e sua jornada acaba aqui  ");
+                    System.out.println("Resposta incorreta e sua jornada acaba aqui  "+perdeu);System.exit(0);    
                     break;
+                    
+                    default : System.out.println("Opçao invalida escolha entre as alternativas A,B,C,D ou E "+perdeu);System.exit(0);
                 }
             }while(tacerto3);
+             if (tacerto3)
+          {
+              System.out.println("Avançando na sua jornada, nosso mochileiro conseguiu um item mágico que poderá ajudá-lo mais pra frente nesta história. ");
+          }
           break;
       case 4 :
       System.out.println(" A aventura dos numeros nos espera, mochileiro(a) Fada " + nome+ "\n\n");
@@ -328,33 +345,40 @@ nome +
                 System.out.println("E)  Essa jornada será facil a respota correta é 20");
                  System.out.println("Informe sua resposta: ");
                  
-                operacaoStr = ler.next();
+                operacaoStr = scanner.next();
                 operacao = operacaoStr .charAt(0);
-                switch(operacao) {
+                switch(operacao)
+               {
                 case 'a': case 'A':
-                    System.out.println("Resposta incorreta e sua jornada acaba aqui  ");
+                    System.out.println("Resposta incorreta e sua jornada acaba aqui  "+perdeu);System.exit(0);    
                     break;
                 case 'b':case 'B':
-                    System.out.println("... 12, você é bem esperto e por isso lhe darei um cantil com um pouco da água mágica que tenho em meu lar. Ela lhe ajudará a passar por calores extremos e até venenos.\n Boa sorte em sua jornada, você irá precisar.\n" +
-"\n" +
-                 "\n" +
-                "Avançando na sua jornada, nosso mochileiro conseguiu um item mágico que poderá ajudá-lo mais pra frente nesta história. ");
+                    System.out.println("... 12, você é bem esperto e por isso lhe darei um cantil com um pouco da água mágica que tenho em meu lar. Ela lhe ajudará a passar por calores extremos e até venenos.\n Boa sorte em sua jornada, você irá precisar.\n");
                     break;
                 case 'c':case 'C':
-                    System.out.println("Resposta incorreta e sua jornada acaba aqui  ");
+                    System.out.println("Resposta incorreta e sua jornada acaba aqui  "+perdeu);System.exit(0);    
                     break;
                 case 'd':case 'D':
-                    System.out.println("Resposta incorreta e sua jornada acaba aqui  ");
+                    System.out.println("Resposta incorreta e sua jornada acaba aqui  "+perdeu);System.exit(0);    
                     break;
                     
                 case 'e':case 'E':
-                    System.out.println("Resposta incorreta e sua jornada acaba aqui  ");
+                    System.out.println("Resposta incorreta e sua jornada acaba aqui  "+perdeu);System.exit(0);    
                     break;
-                }
+                    
+                default : System.out.println("Opçao invalida escolha entre as alternativas A,B,C,D ou E "+perdeu);System.exit(0);
+               }
             }while(tacerto4);
+             if (tacerto4)
+          {
+              System.out.println("Avançando na sua jornada, nosso mochileiro conseguiu um item mágico que poderá ajudá-lo mais pra frente nesta história. ");
+          }
+             
           break;
+          
         }
       } while(escolha >4);
+     
       String questao2= "Neste momento está saindo para outro ponto de sua jornada ate chegar aonde deseja, mas nesse meio tempo acaba encontrando com seu conhecido e futuro amigo, O Andarilho.\n" +
 "Neste momento crucial ambos se juntam e formam uma dupla infalível para conseguir chegar até onde ambos querem. Mas no caso do Mochileiro, ele deseja emprego mas seu companheiro... já deseja algo diferente, algo mais ardente, nosso querido Andarilho quer aguardente e para onde ambos vão... eles encontram os dois.\n" +
 "\n" +
@@ -366,9 +390,10 @@ nome +
 "Ao se aproximar da cidade olharam uma bela muralha onde se encontrava dois guardas, e então disseram:\n" +
 "AUTO LA!!! Quem são voces ?\n" +
 "Ola, somos andarilhos, estamos so de passagem por esta cidade.\n" +
-"bom, para entrar aqui deverao responder a uma pergunta… \n" +
-"O triplo de um número adicionado com 45 corresponde a seu dobro adicionado a 155. Determine esse numero;";
-      System.out.println("Por ter este cantil mágico, voce terá uma chance de errar apenas...");
+"bom, para entrar aqui deverao responder a uma pergunta… \n\n" +
+"O triplo de um número adicionado com 45 corresponde a seu dobro adicionado a 155. Determine esse numero;\n\n";
+      System.out.println("Por ter este cantil mágico, voce terá uma chance de errar apenas.../");
+      
       System.out.println(questao2);  
         boolean acertou = false;
         int cantil=0;
@@ -380,6 +405,7 @@ nome +
           alternativas.add("Nenhuma das alternativas"); // resposta correta
           do
        {
+           if (cantil>=1){ System.out.println("- O triplo de um número adicionado com 45 corresponde a seu dobro adicionado a 155. Determine esse numero;\n"); }
               Collections.shuffle(alternativas);
            System.out.println("a) " + alternativas.get(0));
            System.out.println("b) " + alternativas.get(1));
@@ -387,61 +413,68 @@ nome +
            System.out.println("d) " + alternativas.get(3));
            System.out.println("e) " + alternativas.get(4));
            System.out.print("Escolha uma alternativa: ");
-           String resposta = ler.next();
+           String resposta = scanner.next();
           switch (resposta)
           {
            case "a":
            case "A": 
-           if (alternativas.get(0).equals("101010")) {
-            System.out.println("Resposta correta!");
+           if (alternativas.get(0).equals("O número é 110")) {
+            System.out.println("Resposta correta!\n");
             acertou = true;
            } else {
-                  System.out.println("Resposta incorreta!");}
+                  System.out.println("Resposta incorreta!\n");}
                   break;
                   
               case "b":          
               case "B":
          if (alternativas.get(1).equals("O número é 110")) {
-         System.out.println("Resposta correta!");
+         System.out.println("Resposta correta!\n");
          acertou = true;
          } else {
-         System.out.println("Resposta incorreta!"); }
+         System.out.println("Resposta incorreta!\n"); }
          break;
          
          case "c":
          case "C":
          if (alternativas.get(2).equals("O número é 110")) {
-         System.out.println("Resposta correta!");
+         System.out.println("Resposta correta!\n");
          acertou = true;
          } else {
-         System.out.println("Resposta incorreta!");
+         System.out.println("Resposta incorreta!\n");
          }
                   break;
          case "d":
          case "D":
          if (alternativas.get(3).equals("O número é 110")) {
-         System.out.println("Resposta correta!");
+         System.out.println("Resposta correta!\n");
          acertou = true;
          } else {
-         System.out.println("Resposta incorreta!");}
+         System.out.println("Resposta incorreta!\n");}
          break;
          
          case "e":
          case "E":
          if (alternativas.get(4).equals("O número é 110")) {
-         System.out.println("Resposta correta!");
+         System.out.println("Resposta correta!\n");
          acertou = true;
          } else {         
-         System.out.println("Resposta incorreta!");}
+         System.out.println("Resposta incorreta!\n");}
 
          break;
          default:
-         System.out.println("Escolha inválida!");}
+         System.out.println("Escolha inválida!\n");}
           cantil++;
      } while (!acertou && cantil<2);
-          if (cantil==1){System.out.println(" voce perdeu volte de onde voce veio e conte as casas com atençao agora, e muito obrigado pelo cantil maneiro ");}
-          else{System.out.println(" Esta correto, parabens pode passar. Sorte sua possuir um cantil tão maneiro ");}
-          String questao3="apos este enigma, os mesmo vão ao meio da cidade, o Andarilho avistou uma taverna e quis entrar, mas o Mochileiro não quis e não entendeu o porquê do seu companheiro estar tão afobado para entrar, então ele perguntou mas algo inesperado aconteceu.\n" +
+          
+          if (acertou)
+          {
+              System.out.println(" Esta correto, parabens pode passar. Sorte sua possuir um cantil tão maneiro ");
+          }
+          else
+          {
+              System.out.println(" voce perdeu volte de onde voce veio, muito obrigado pelo cantil maneiro "+perdeu); System.exit(0);
+          }
+          String questao3="Apos este enigma, os mesmo vão ao meio da cidade, o Andarilho avistou uma taverna e quis entrar, mas o Mochileiro não quis e não entendeu o porquê do seu companheiro estar tão afobado para entrar, então ele perguntou mas algo inesperado aconteceu.\n" +
 "- Ei Andarilho porque você está tão afobado assim para entrar nesta taverna?\n" +
 "- Olha... te falo se responder uma pergunta, o que acha ?\n" +
 "- Acho excelente, pode mandar.\n" +
@@ -450,7 +483,7 @@ nome +
 "\n" +
 "- O quintuplo de um número adicionado com 65 corresponde a seu triplo adicionado 195. Determine esse número.";
                 System.out.println(questao3);  
-        boolean acertou3 = false;
+        boolean acertou2= false;
         int cantil2=0;
           List alternativas2 = new ArrayList();
           alternativas2.add("50"); 
@@ -461,67 +494,74 @@ nome +
           do
        {
               Collections.shuffle(alternativas2);
-           System.out.println("- O quintuplo de um número adicionado com 65 corresponde a seu triplo adicionado 195. Determine esse número.");
+          if (cantil2>=1){ System.out.println("- O quintuplo de um número adicionado com 65 corresponde a seu triplo adicionado 195. Determine esse número.\n"); }
            System.out.println("a) " + alternativas2.get(0));
            System.out.println("b) " + alternativas2.get(1));
            System.out.println("c) " + alternativas2.get(2));
            System.out.println("d) " + alternativas2.get(3));
            System.out.println("e) " + alternativas2.get(4));
-           System.out.print(" escola a alternativa ");
-           String resposta = ler.next();
+           System.out.print(" escolha a alternativa ");
+           String resposta = scanner.next();
           switch (resposta)
           {
            case "a":
            case "A": 
            if (alternativas2.get(0).equals("65")) {
-            System.out.println("Resposta correta!");
-            acertou3 = true;
+            System.out.println("Resposta correta!\n");
+            acertou2 = true;
            } else {
-                  System.out.println("Resposta incorreta!");}
+                  System.out.println("Resposta incorreta!\n");}
                   break;
                   
               case "b":          
               case "B":
          if (alternativas2.get(1).equals("65")) {
-         System.out.println("Resposta correta!");
-         acertou3 = true;
+         System.out.println("Resposta correta!\n");
+         acertou2 = true;
          } else {
-         System.out.println("Resposta incorreta!"); }
+         System.out.println("Resposta incorreta!\n"); }
          break;
          
          case "c":
          case "C":
          if (alternativas2.get(2).equals("65")) {
-         System.out.println("Resposta correta!");
-         acertou3 = true;
+         System.out.println("Resposta correta!\n");
+         acertou2 = true;
          } else {
-         System.out.println("Resposta incorreta!");
+         System.out.println("Resposta incorreta!\n");
          }
                   break;
          case "d":
          case "D":
          if (alternativas2.get(3).equals("65")) {
-         System.out.println("Resposta correta!");
-         acertou3 = true;
+         System.out.println("Resposta correta!\n");
+         acertou2 = true;
          } else {
-         System.out.println("Resposta incorreta!");}
+         System.out.println("Resposta incorreta!\n");}
          break;
          
          case "e":
          case "E":
          if (alternativas2.get(4).equals("65")) {
-         System.out.println("Resposta correta!");
-         acertou3 = true;
+         System.out.println("Resposta correta!\n");
+         acertou2 = true;
          } else {         
-         System.out.println("Resposta incorreta!");}
+         System.out.println("Resposta incorreta!\n");}
 
          break;
          default:
-         System.out.println("Escolha inválida!");}
+         System.out.println("Escolha inválida!\n");
+        }
           cantil2++;
-     } while (!acertou3 && cantil2<2);
-          if (cantil==1){System.out.println(" infelismente nao vou poder falar,siga sua rota sem eu \n mas sem ele " +nome+ " nao conseguirar seguir, volte ao inicio");}
-          else{System.out.println("Está correto, promessa é promessa. Estou tão afobado assim porque eu amo aguardente, acho que de um ano para cá acabei ficando dependente ou apenas sendo um degustador, por isso a vontade de tomar ou ir na taverna. ");}
+     } while (!acertou2 && cantil2<2);
+          if (acertou2)
+          {
+              System.out.println("Está correto, promessa é promessa. Estou tão afobado assim porque eu amo aguardente, acho que de um ano para cá acabei ficando dependente ou apenas sendo um degustador, por isso a vontade de tomar ou ir na taverna. ");
+          }
+          else
+          {
+              System.out.println(" Infelismente nao vou poder falar,siga sua rota sem eu \n Mas sem ele " +nome+ " não conseguirá seguir,"+perdeu);System.exit(0);
+          }
           
 
    }
