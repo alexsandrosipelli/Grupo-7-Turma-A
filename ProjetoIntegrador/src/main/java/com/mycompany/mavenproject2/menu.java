@@ -22,7 +22,7 @@ public class menu {
         System.out.println("\n1 - Jogar\n2 - Créditos\n3 - Instruções\n4 - Sair");
         int entrada = scanner.nextInt();
         
-       
+       while (true){
         switch (entrada){
             
             case 1:
@@ -40,7 +40,7 @@ public class menu {
             default: System.out.println(" Opção invalida escolha entre 1 e 4!!! ");
                     
         }
-    }
+    }}
 
     
     public static void jogar(){
@@ -52,8 +52,8 @@ public class menu {
      perdeu += " TENTE DE NOVO!!! ";
      
  
-    do
-   {
+    
+     
      System.out.println("Olá, bem vindo ao Mochileiro \n");
    
     
@@ -66,20 +66,10 @@ public class menu {
      if (escolhadeinicio ==1 ){ System.out.println(" Iniciando a jornanda da sabedoria " + "\n " );}
      
                  
-     else { System.out.println(" Que pena estamos aguardando sua sede por sabedoria " + "\n" );}
-    }while (escolhadeinicio !=1 );
+     else { System.out.println(" Que pena estamos aguardando sua sede por sabedoria " + "\n" ); System.exit(0);}
     
-            JOptionPane.showMessageDialog(null,"Antes de iniciar a sua jornada, existe algo que precisa saber. Este é um mundo cheio de números e contas matematicas, "
-                    + "portanto, é necessario que entenda as 4 operações utilizadas nesta matéria (Matemática).");
-            JOptionPane.showMessageDialog(null, "Adição e Subtração.\n"
-                    + "\nA adição combina dois números em um único número, denominado soma, total ou resultado. Adicionar mais números corresponde a repetir a operação.\n "
-                    + "\nA Subtração ocorre quando uma quantidade é retirada de outra, e o valor restante é o resultado dessa operação, fazendo assim um menos o outro.");
-            JOptionPane.showMessageDialog(null, "Divisão e Multiplicação.\n"
-                    + "\n Multiplicação é uma forma simples de se adicionar uma quantidade finita de números. O resultado da multiplicação de dois números é chamado produto.\n"
-                    + "\n Um exemplo é: o número é 3 mas o número pedido para ser repetido será o 5 então: 5 x 3 = 5 + 5 + 5 = 15.\n "
-                    + "\n A subtração é o inverso da multiplicação. Exemplo: se 5 x 3 = 15, então 15 / 3 = 5.");
-            JOptionPane.showMessageDialog(null,"Importante dizer que iremos trabalhar com modelagem. A modelagem matemática é a área do conhecimento que estuda a simulação de sistemas reais"
-                    + " a fim de prever o comportamento destes, sendo empregada em diversos campos de estudo.Dito isto, seguimos e boa sorte em sua jornada.");
+    
+            
     
             
                
@@ -1049,10 +1039,24 @@ public class menu {
     
     public static void intruções(){
         System.out.println("instruções");
+            JOptionPane.showMessageDialog(null,"Antes de iniciar a sua jornada, existe algo que precisa saber. Este é um mundo cheio de números e contas matematicas, "
+                    + "portanto, é necessario que entenda as 4 operações utilizadas nesta matéria (Matemática).");
+            JOptionPane.showMessageDialog(null, "Adição e Subtração.\n"
+                    + "\nA adição combina dois números em um único número, denominado soma, total ou resultado. Adicionar mais números corresponde a repetir a operação.\n "
+                    + "\nA Subtração ocorre quando uma quantidade é retirada de outra, e o valor restante é o resultado dessa operação, fazendo assim um menos o outro.");
+            JOptionPane.showMessageDialog(null, "Divisão e Multiplicação.\n"
+                    + "\n Multiplicação é uma forma simples de se adicionar uma quantidade finita de números. O resultado da multiplicação de dois números é chamado produto.\n"
+                    + "\n Um exemplo é: o número é 3 mas o número pedido para ser repetido será o 5 então: 5 x 3 = 5 + 5 + 5 = 15.\n "
+                    + "\n A subtração é o inverso da multiplicação. Exemplo: se 5 x 3 = 15, então 15 / 3 = 5.");
+            JOptionPane.showMessageDialog(null,"Importante dizer que iremos trabalhar com modelagem. A modelagem matemática é a área do conhecimento que estuda a simulação de sistemas reais"
+                    + " a fim de prever o comportamento destes, sendo empregada em diversos campos de estudo.Dito isto, seguimos e boa sorte em sua jornada.");
+        
+        menu();
     }
     
     public static void créditos(){
         System.out.println("===== DESENVOLVEDORES =====\nAlexsandro Lopes Sipelli\nDanilo Ribeiro Cueto\nEdney Pereira Silva\nHiago Ferreira\nMatheus Medeiros Escudeiro");
+        menu();
     }
     
     public static void main(String[] args) {
