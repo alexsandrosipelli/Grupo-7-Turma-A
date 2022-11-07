@@ -4,5 +4,5 @@ Criando jogo para a materia Projeto integrador, com Professor Eduardo Takeo, jog
 Alexsandro Lopes Sipelli,
 Danilo Ribeiro Cueto,
 Edney Pereira Silva,
-Hiago Ferreira e 
+Hiago Perreira e 
 Matheus Medeiros Escudeiro.
