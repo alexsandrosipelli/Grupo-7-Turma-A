@@ -16,35 +16,27 @@ import javax.swing.JOptionPane;
 //CORRIGINDO ALGUNS ERROS DE LOGICA, TEXTO E CONDIÇÕES...
 
 public class menu {
-    public static void menu(){
+  public static void menu()
+  {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Menu");
-        System.out.println("\n1 - Jogar\n2 - Créditos\n3 - Instruções\n4 - Sair");
-        int entrada = scanner.nextInt();
-        
-       while (true){
-        switch (entrada){
+         while (true ){
+             System.out.println("Menu");
+            System.out.println("\n1 - Jogar\n2 - Créditos\n3 - Instruções\n4 - Sair");
+            String entrada = scanner.next();
             
-            case 1:
-                jogar();
-                break;
-            case 2:
-                créditos();
-                break;
-            case 3:
-                intruções();
-                break;
-            case 4: 
-                System.exit(0);
-                
-            default: System.out.println(" Opção invalida escolha entre 1 e 4!!! ");
-                    
-        }
-    }}
+          if ( entrada.equals("1") )        jogar();           
+          else if ( entrada.equals("2") )   créditos(); 
+          else if ( entrada.equals("3") )   intruções();
+          else if ( entrada.equals("4") )       System.exit(0);
+          else  { System.out.println(" Opção invalida escolha entre 1 e 4!!!");
+                  System.out.println();}
+       } // fim do while 
+    
+  } // fim da sub
 
     
     public static void jogar(){
-         double escolhadeinicio ;
+         String escolhadeinicio ;
       String nome; 
       int tecla;
      Scanner scanner = new Scanner(System.in);
@@ -62,12 +54,17 @@ public class menu {
      System.out.println(" Você deseja iniciar ? " + "\n");
      System.out.println("1- sim ");
      System.out.println("2- nao ");
-     escolhadeinicio= scanner.nextDouble();
-     if (escolhadeinicio ==1 ){ System.out.println(" Iniciando a jornanda da sabedoria " + "\n " );}
+     escolhadeinicio= scanner.next();
+     while(!(escolhadeinicio.equals("1")))
+     {
+     if ( escolhadeinicio.equals("1") )  { System.out.println(" Iniciando a jornanda da sabedoria " + "\n " );}
      
                  
-     else { System.out.println(" Que pena estamos aguardando sua sede por sabedoria " + "\n" ); System.exit(0);}
+     else if ( escolhadeinicio.equals("2")){ System.out.println(" Que pena estamos aguardando sua sede por sabedoria " + "\n" ); System.exit(0);}
+     else  { System.out.println(" Opção invalida escolha entre 1 e 2!!!");
+                  System.out.println();}
     
+     }
     
             
     
