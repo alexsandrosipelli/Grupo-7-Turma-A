@@ -70,7 +70,7 @@ public class menu {
     
             
                
-    System.out.println(" Qual é o seu nome ? \n");
+    System.out.println(" Qual é o seu nome forasteiro ? \n");
     nome= scanner.next();
     System.out.println(" Muito bem Grande Mochileiro " + nome );
     
