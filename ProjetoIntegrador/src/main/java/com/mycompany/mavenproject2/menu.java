@@ -208,7 +208,7 @@ public class menu {
                 
                 System.out.println("A) Tão fácil a respota correta é  30");
                 System.out.println("B) Tinha uma mais dificil não ? A respota correta é 12 ");
-                System.out.println("C) Moleza a respota correta é 10 ");
+                System.out.println("C) Molezinha a respota correta é 10 ");
                 System.out.println("D) Nao preciso da mochila mesmo não a resposta correta é 84 ");
                 System.out.println("E)  Essa jornada será facil a respota correta é 20");
                  System.out.println("Informe sua resposta: ");
