@@ -395,8 +395,9 @@
               {
                   System.out.println("Avançando na sua jornada, nosso mochileiro conseguiu um item mágico que poderá ajudá-lo mais pra frente nesta história. ");
               }
-
               break;
+              
+          default: System.out.println("Opçao invalida  escolha entre 1 e 4 !!!");
 
             }
           } while(escolha >4);
@@ -1064,16 +1065,17 @@
                         + "Exemplo: Maria comprou duas maçãs e deu uma a seu irmão. Quantas maçãs restaram para Maria ?\n "
                         + "Neste exemplo pegamos a quantidade de maçãs que maria comprou e subtraimos a quantidade que foi dada a seu irmão, ou seja: 2M - 1M = 1M (M = Maçãs).\n"
                         + "Dito isto, seguimos e boa sorte em sua jornada.");
+                
                escolhainstrucoes = JOptionPane.showInputDialog(null,menuinstrucoes, "---Retornar ao menu---", JOptionPane.QUESTION_MESSAGE);//Janela de pergunta.
               if ( escolhainstrucoes.equals("1") )        menu();           
               else if ( escolhainstrucoes.equals("2") )   instruções();
-              else  { System.out.println(" Opção invalida escolha entre 1 e 2!!!"); instruções();
+              else  { JOptionPane.showMessageDialog(null,"Opção invalida escolha entre 1 e 2 "); instruções();
                       System.out.println();}
             menu();
         }
 
         public static void créditos(){
-            System.out.println("===== DESENVOLVEDORES =====\nAlexsandro Lopes Sipelli\nDanilo Ribeiro Cueto\nEdney Pereira Silva\nHiago Pereira\nMatheus Medeiros Escudeiro");
+            System.out.println("===== DESENVOLVEDORES =====\nAlexsandro Lopes Sipelli\nDanilo Ribeiro Cueto\nEdney Pereira Silva\nHiago Pereira\nMatheus Medeiros Escudeiro \n");
             menu();
         }
 

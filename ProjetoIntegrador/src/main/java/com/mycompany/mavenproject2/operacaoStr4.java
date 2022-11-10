@@ -4,19 +4,10 @@
  */
 package com.mycompany.mavenproject2;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
-
 /**
  *
  * @author alexs
  */
-public class Testa_perguntas {
+class operacaoStr4 {
     
-    public static void main(String[]args){
-        
-        
-    }
 }
