@@ -116,8 +116,8 @@
 
 
                  System.out.println("\n Ninfa - … Qual a soma de um número com ele mesmo que subtraído por 3 é igual a 1?…\n "
-                          + " - 2… respondeu a mochila antes dele." + 
-                    "- Quem está aí? perguntou a Ninfa\n" +
+                          + " - 2… Respondeu a mochila antes dele." + 
+                    "- Quem está aí? Perguntou a Ninfa\n" +
                     nome + " Novamente explicando, esta é minha mochila encantada.\n" +
                     "Ninfa - Bom, você acertou com ajuda, a próxima será sem ajuda então pense bem… qual número que somado com 30 e subtraído por 20 é igual a 22?\n" +//Primeira questão.
                     nome + "Essa eu sei, a resposta é... ");
@@ -1043,7 +1043,7 @@
        }
 
 
-        public static void instruções(){ //Explicação simplificada das quatro operações da matemtica e explicação simplificada da modelagem que iremos utilizar para responder os desafios do jogo.
+        public static void instruções(){ //Explicação simplificada das quatro operações da matemática e explicação simplificada da modelagem que iremos utilizar para responder os desafios do jogo.
             
             String menuinstrucoes= "\n 1- Sim, quero voltar ao menu !! \n"
             +" 2- Não entendi, quero ver novamente. ";
@@ -1059,14 +1059,14 @@
                 JOptionPane.showMessageDialog(null, "Divisão e Multiplicação.\n"
                         + "\n Multiplicação é uma forma simples de se adicionar uma quantidade finita de números. O resultado da multiplicação de dois números é chamado produto.\n"
                         + "\n Um exemplo é: o número é 3 mas o número pedido para ser repetido será o 5 então: 5 x 3 = 5 + 5 + 5 = 15.\n "
-                        + "\n A subtração é o inverso da multiplicação. Exemplo: se 5 x 3 = 15, então 15 / 3 = 5.");
+                        + "\n A divisão é o inverso da multiplicação. Exemplo: se 5 x 3 = 15, então 15 / 3 = 5.");
                 JOptionPane.showMessageDialog(null,"Importante dizer que iremos trabalhar com modelagem. A modelagem matemática é a área do conhecimento que estuda a simulação de sistemas reais\n"
-                        + " a fim de prever o comportamento destes, sendo empregada em diversos campos de estudo.\n"
+                        + "a fim de prever o comportamento destes, sendo empregada em diversos campos de estudo.\n"
                         + "Exemplo: Maria comprou duas maçãs e deu uma a seu irmão. Quantas maçãs restaram para Maria ?\n "
                         + "Neste exemplo pegamos a quantidade de maçãs que maria comprou e subtraimos a quantidade que foi dada a seu irmão, ou seja: 2M - 1M = 1M (M = Maçãs).\n"
                         + "Dito isto, seguimos e boa sorte em sua jornada.");
                 
-               escolhainstrucoes = JOptionPane.showInputDialog(null,menuinstrucoes, "---Retornar ao menu---", JOptionPane.QUESTION_MESSAGE);//Janela de pergunta.
+               escolhainstrucoes = JOptionPane.showInputDialog(null,menuinstrucoes, "---Retornar ao menu ?---", JOptionPane.QUESTION_MESSAGE);//Janela de pergunta.
               if ( escolhainstrucoes.equals("1") )        menu();           
               else if ( escolhainstrucoes.equals("2") )   instruções();
               else  { JOptionPane.showMessageDialog(null,"Opção invalida escolha entre 1 e 2 "); instruções();
