@@ -16,7 +16,7 @@
     //CORRIGINDO ALGUNS ERROS DE LOGICA, TEXTO E CONDIÇÕES...
 
     public class menu {
-      public static void menu()
+      public static void menu()// Edney
       {
             Scanner scanner = new Scanner(System.in);
              while (true )
@@ -35,8 +35,8 @@
 
       } // fim da sub
 
-
-        public static void jogar(){
+      // Subrotina jogar
+        public static void jogar(){//Danilo 
              String escolhadeinicio ;
           String nome; 
           int tecla;
@@ -56,9 +56,9 @@
          System.out.println("1- sim ");
          System.out.println("2- nao ");
          escolhadeinicio= scanner.next();
-         while(!(escolhadeinicio.equals("1")))
-         {
-         if ( escolhadeinicio.equals("1") )  { System.out.println(" Iniciando a jornanda da sabedoria " + "\n " );}
+         while(!(escolhadeinicio.equals("1")))// Enquanto a opção for diferente de 1 o jogo não inicia
+         {// Validando as questões.
+         if ( escolhadeinicio.equals("1") )  { System.out.println(" Iniciando a jornanda da sabedoria. " + "\n " );}
 
 
          else if ( escolhadeinicio.equals("2")){ System.out.println(" Que pena estamos aguardando sua sede por sabedoria " + "\n" ); System.exit(0);}
@@ -83,7 +83,7 @@
          System.out.println("Escolha sua classe \n 1-Guerreiro(a) \n 2-Mago(a) \n 3-Bruxo(a) \n 4-Fada ");
           escolha = scanner.nextInt();
 
-          switch (escolha){
+          switch (escolha){// Matheus
               case 1 :
           System.out.println("A aventura dos numeros nos espera, Gurreiro(a) " +" Mochileiro(a) " + nome +"\n\n");
           System.out.println("Enumerando sua a aventura \n \n Ops... Iniciando sua aventura... \n ");
@@ -431,11 +431,11 @@
            {
                if (cantil1>=0){ System.out.println("- O triplo de um número adicionado com 45 corresponde a seu dobro adicionado a 155. Determine esse numero;\n"); } //Questão 2.
                   Collections.shuffle(alternativas1);// Embaralhando as alternativas.
-               System.out.println("a) " + alternativas1.get(0));
-               System.out.println("b) " + alternativas1.get(1));
+               System.out.println("a) " + alternativas1.get(0));//"Get(0)" adiciona a primeira linha da lista do Arraylist ao embaralhamento.
+               System.out.println("b) " + alternativas1.get(1));//"Get(1)" adiciona a segunda linha da lista Arraylist
                System.out.println("c) " + alternativas1.get(2));
                System.out.println("d) " + alternativas1.get(3));
-               System.out.println("e) " + alternativas1.get(4));
+               System.out.println("e) " + alternativas1.get(4)); 
                System.out.print("Escolha uma alternativa: ");
                String resposta = scanner.next();
               switch (resposta)
