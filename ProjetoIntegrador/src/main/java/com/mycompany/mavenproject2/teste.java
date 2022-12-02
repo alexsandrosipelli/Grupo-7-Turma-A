@@ -9,27 +9,25 @@ import java.util.Collections;
 import java.util.List;
 
 public class teste {
-	static void pergunta1() {
+	static void pergunta1() {//pergunta1 sub rotina ASSIM SEGUINDO NAS OUTRAS PERGUNTAS...
 		System.out.println("============ PERGUNTA 1 ============");
-		String operacaoStr;
-		char operacao;
-		boolean tacerto = false;
-		String perdeu = "\n VOCÊ PERDEU ";
-		perdeu += " TENTE DE NOVO!!! ";
-
-		do {
-
-			System.out.println("A) Tão fácil a respota correta é  30");
+		String pergunta1;//string de resposta
+		char operacao;//  variavel char para ler apenas um caractere 
+		boolean tacerto = false;// variavel boolean para validar resposta certa
+		String perdeu = "\n VOCÊ PERDEU ";// variavel string de perder
+		perdeu += " TENTE DE NOVO!!! ";//acrescentando mais testo da variavel de perder
+		
+			System.out.println("A) Tão fácil a respota correta é  30");//print das altenativas 
 			System.out.println("B) Tinha uma mais dificil não ? A respota correta é 12 ");
 			System.out.println("C) Moleza a respota correta é 10 ");
 			System.out.println("D) Nao preciso da mochila mesmo não a resposta correta é 84 ");
 			System.out.println("E) Essa jornada será facil a respota correta é 20");
 			System.out.println("Informe sua resposta: ");
 
-			operacaoStr = "B";
-			operacao = operacaoStr.charAt(0);
-			switch (operacao) {
-			case 'a':
+			pergunta1 = "B";// colocando resposta na varivel para testar a resposta na pergunta 
+			operacao = pergunta1.charAt(0);// char analisando a varivel de resposta e pegando apenas o primeiro caractere 
+			switch (operacao) {//switch com cases de alternativas de acordo com a variavel do charAt
+			case 'a'://cases com ('..') apenas um catactere.
 			case 'A':
 				System.out.println("Resposta incorreta e sua jornada acaba aqui  " + perdeu);
 				System.exit(0);
@@ -58,9 +56,9 @@ public class teste {
 				System.out.println("Opçao invalida escolha entre as alternativas A,B,C,D ou E " + perdeu);
 				System.exit(0);
 			}
-		} while (tacerto);
+		
 
-		if (tacerto) {
+		if (tacerto) {// validando se a resposta esta correta 
 			System.out.println(
 					"Avançando na sua jornada, nosso mochileiro conseguiu um item mágico que poderá ajudá-lo mais pra frente nesta história. ");
 		}
@@ -152,8 +150,7 @@ public class teste {
 		} else {
 			System.out.println(
 					" Guarda - Voce perdeu volte de onde voce veio, muito obrigado pelo cantil maneiro ,perdeu");
-			System.exit(0);
-		}
+					}
 	}
 
 	static void pergunta3() {
@@ -237,9 +234,12 @@ public class teste {
 	}
 
 	public static void main(String[] args) {
+            for(int i=0;i<3;i++) // loop for tentando 3 vezes  o codigo
+            {
 		System.out.println("============( TESTADOR )============");
 		pergunta1();
 		pergunta2();
 		pergunta3();
+            }
 	}
 }
